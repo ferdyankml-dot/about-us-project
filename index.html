@@ -1,40 +1,62 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<main>
+  <!-- HERO SECTION -->
+  <section id="hero" class="section section--hero" data-animate="fade-in">
+    <div class="container">
+      <h1>Tentang Kami</h1>
+      <p class="hero__tagline">Membangun solusi terbaik untuk masa depan.</p>
+      <a href="#tim" class="btn btn--primary">Kenali Tim Kami</a>
+    </div>
+  </section>
 
-    <title>About Us</title>
+  <!-- VISI MISI SECTION -->
+  <section id="visi-misi" class="section" data-animate="fade-up">
+    <div class="container">
+      <h2>Visi & Misi</h2>
+      <div class="grid grid--2col">
+        <div class="card">
+          <div class="card__body">
+            <h3 class="card__title">Visi</h3>
+            <p class="card__text">Menjadi perusahaan teknologi terdepan yang memberikan dampak positif bagi masyarakat luas.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__body">
+            <h3 class="card__title">Misi</h3>
+            <p class="card__text">Menghadirkan solusi inovatif, berkelanjutan, dan mudah diakses oleh semua kalangan.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/sections.css">
-    <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
-</head>
+  <!-- SEJARAH SECTION -->
+  <section id="sejarah" class="section" data-animate="slide-left">
+    <div class="container">
+      <h2>Sejarah Perusahaan</h2>
+      <div class="timeline" data-js="timeline">
+        <div class="timeline__item">
+          <span class="timeline__year">2019</span>
+          <p class="timeline__desc">Perusahaan didirikan dengan visi membangun produk digital lokal.</p>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__year">2021</span>
+          <p class="timeline__desc">Ekspansi tim dan peluncuran produk pertama ke publik.</p>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__year">2023</span>
+          <p class="timeline__desc">Meraih penghargaan startup terbaik dan memperluas jangkauan nasional.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<body>
-
-    <main>
-
-        <section id="hero">
-        </section>
-
-        <section id="visi-misi">
-        </section>
-
-        <section id="sejarah">
-        </section>
-
-        <section id="tim">
-        </section>
-
-    </main>
-
-    <script src="js/state.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/animations.js"></script>
-
-</body>
-</html>
+  <!-- TIM SECTION -->
+  <section id="tim" class="section" data-animate="fade-up">
+    <div class="container">
+      <h2>Tim Kami</h2>
+      <div class="grid grid--3col" data-js="team-list">
+        <!-- diisi otomatis oleh js/main.js dari team-dummy.js -->
+      </div>
+    </div>
+  </section>
+</main>
