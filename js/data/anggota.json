@@ -1,0 +1,46 @@
+{
+  "anggota": [
+    {
+      "name": "Ferdyan Kamil",
+      "angkatan": "2025",
+      "nim": "124250018",
+      "role": "Lead Front End",
+      "image": "/assets/ferdyan.webp"
+    },
+    {
+      "name": "Muhammad Fakhir Andito",
+      "angkatan": "2025",
+      "nim": "124250078",
+      "role": "Staff Front End",
+      "image": "/assets/dito.webp"
+    },
+    {
+      "name": "Ananda Vektorino Ibrahim",
+      "angkatan": "2025",
+      "nim": "124250082",
+      "role": "Staff Front End",
+      "image": "/assets/vektor.webp"
+    },
+    {
+      "name": "Nadya Gildas Tsaqif",
+      "angkatan": "2025",
+      "nim": "124250012",
+      "role": "Staff Front End",
+      "image": "/assets/gildas.webp"
+    },
+    {
+      "name": "Cintia Mutiara Aretha",
+      "angkatan": "2025",
+      "nim": "124250032",
+      "role": "Staff Front End",
+      "image": "/assets/cintia.webp"
+    },
+    {
+      "name": "Theresia Frederika Kusuma Wardani",
+      "angkatan": "2025",
+      "nim": "124250101",
+      "role": "Staff Front End",
+      "image": "/assets/erika.webp"
+    }
+  ]
+}
