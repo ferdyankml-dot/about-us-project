@@ -1,1 +1,1 @@
-const vektor = null
+const vektor = null;
