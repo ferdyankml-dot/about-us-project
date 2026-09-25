@@ -1,77 +1,282 @@
-/* =============================================
-   SECTIONS.CSS — Layout & spacing tiap section
-   Bukan untuk style komponen (itu di components.css)
-   ============================================= */
+/* ==========================================================================
+   Section Styles (starter)
+   File milik Peran 3 (Content & Section Developer) — ini draf awal supaya
+   index.html langsung tampil rapi. Silakan diubah/ditambah sesuai konten.
+   ========================================================================== */
 
-/* Base section */
-.section {
-  padding: 80px 0;
+/* --------------------------------------------------------------------------
+   Site header / nav
+   -------------------------------------------------------------------------- */
+
+/* .site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(247, 245, 241, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border);
 }
 
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-/* ---- HERO ---- */
-.section--hero {
-  background-color: #f9f9f9;
-  text-align: center;
-  padding: 120px 0;
-}
-
-.section--hero h1 {
-  font-size: 3rem;
-  margin-bottom: 16px;
-}
-
-.hero__tagline {
-  font-size: 1.25rem;
-  color: #555;
-  margin-bottom: 32px;
-}
-
-/* ---- VISI MISI ---- */
-#visi-misi h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-/* ---- SEJARAH ---- */
-#sejarah h2 {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.timeline {
+.site-header .container {
   display: flex;
-  flex-direction: column;
-  gap: 24px;
-  max-width: 700px;
-  margin: 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: var(--space-md);
+}
+
+.site-header__logo {
+  font-family: var(--font-family-display);
+  font-size: 1.3rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.site-nav {
+  display: flex;
+  gap: var(--space-lg);
+  list-style: none;
+}
+
+.site-nav a {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.site-nav a:hover {
+  color: var(--color-primary);
+  text-decoration: none;
+} */
+
+/* --------------------------------------------------------------------------
+   Hero
+   -------------------------------------------------------------------------- */
+
+/* #hero {
+  padding-block: var(--space-2xl) var(--space-xl);
+  background-color: var(--color-bg);
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: var(--space-xl);
+  align-items: end;
+}
+
+.hero__eyebrow {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-sm);
+}
+
+.hero__title {
+  margin-bottom: var(--space-lg);
+}
+
+.hero__lede {
+  font-size: var(--font-size-lg);
+  color: var(--color-text-muted);
+  max-width: 46ch;
+}
+
+.hero__actions {
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.hero__stats {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  border-left: 1px solid var(--color-border);
+  padding-left: var(--space-lg);
+}
+
+.hero__stat-value {
+  font-family: var(--font-family-display);
+  font-size: 2.25rem;
+  color: var(--color-primary);
+  line-height: 1;
+  margin-bottom: var(--space-xs);
+}
+
+.hero__stat-label {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+} */
+
+/* --------------------------------------------------------------------------
+   Generic section rhythm
+   -------------------------------------------------------------------------- */
+
+/* .section {
+  padding-block: var(--space-2xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.section__head {
+  max-width: 56ch;
+  margin-bottom: var(--space-xl);
+}
+
+.section--inverse {
+  background-color: var(--color-bg-inverse);
+  color: var(--color-text-inverse);
+  border-top-color: var(--color-border-inverse);
+}
+
+.section--inverse h2,
+.section--inverse h3 {
+  color: var(--color-text-inverse);
+}
+
+.section--inverse p {
+  color: rgba(242, 240, 234, 0.75);
+} */
+
+/* --------------------------------------------------------------------------
+   Timeline (Sejarah)
+   -------------------------------------------------------------------------- */
+
+/* .timeline {
+  position: relative;
+  max-width: 640px;
+  padding-left: var(--space-xl);
+  border-left: 2px solid var(--color-border);
 }
 
 .timeline__item {
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
+  position: relative;
+  padding-bottom: var(--space-xl);
+}
+
+.timeline__item:last-child {
+  padding-bottom: 0;
+}
+
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--space-xl) - 6px);
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  border: 2px solid var(--color-bg);
+  box-shadow: 0 0 0 2px var(--color-border);
 }
 
 .timeline__year {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #333;
-  min-width: 60px;
+  display: block;
+  font-family: var(--font-family-display);
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: var(--space-xs);
 }
 
 .timeline__desc {
-  color: #555;
-  line-height: 1.6;
+  color: var(--color-text-muted);
+  margin-bottom: 0;
+} */
+
+/* --------------------------------------------------------------------------
+   Team (Tim Kami)
+   -------------------------------------------------------------------------- */
+
+/* .team-card {
+  text-align: left;
 }
 
-/* ---- TIM ---- */
-#tim h2 {
-  text-align: center;
-  margin-bottom: 40px;
+.team-card__photo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: var(--space-md);
+  border: 2px solid var(--color-border);
 }
+
+.team-card__name {
+  font-size: var(--font-size-h5);
+  margin-bottom: var(--space-xs);
+}
+
+.team-card__role {
+  color: var(--color-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  margin-bottom: var(--space-sm);
+}
+
+.team-card__meta {
+  display: flex;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-muted);
+}
+
+.team-card__meta span:not(:last-child)::after {
+  content: '·';
+  margin-left: var(--space-sm);
+  color: var(--color-border);
+} */
+
+/* --------------------------------------------------------------------------
+   Task list (Tugas Divisi)
+   -------------------------------------------------------------------------- */
+
+/* .task-list {
+  list-style: none;
+  display: grid;
+  gap: var(--space-md);
+}
+
+.task-list li {
+  display: flex;
+  gap: var(--space-md);
+  padding-block: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.task-list__index {
+  font-family: var(--font-family-display);
+  color: var(--color-primary);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  width: 2ch;
+}
+
+.task-list__text h4 {
+  margin-bottom: var(--space-xs);
+}
+
+.task-list__text p {
+  margin-bottom: 0;
+  color: var(--color-text-muted);
+} */
+
+/* --------------------------------------------------------------------------
+   Footer
+   -------------------------------------------------------------------------- */
+
+/* .site-footer {
+  padding-block: var(--space-xl);
+  background-color: var(--color-bg-inverse);
+  color: rgba(242, 240, 234, 0.7);
+}
+
+.site-footer .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.site-footer a {
+  color: rgba(242, 240, 234, 0.85);
+} */

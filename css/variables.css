@@ -1,67 +1,84 @@
-:root {
-  /* Warna */
-  --color-primary: #2563eb;
-  --color-primary-hover: #1d4ed8;
-  --color-primary-light: #dbeafe;
+/* ==========================================================================
+   Design System — Theme Tokens
+   Peran: Design System / Component UI Specialist
+   Jangan hardcode warna/spacing di file CSS lain. Selalu pakai var(--token).
+   ========================================================================== */
 
-  --color-secondary: #64748b;
-  --color-secondary-hover: #475569;
+/* :root { */
+  /* ---------- Colors ----------
+     Palet "ink & moss": hijau tua sebagai warna gelap utama (bukan hitam
+     pekat), moss sebagai aksen utama, clay sebagai aksen hangat sekunder. */
+  /* --color-ink: #14231c;
+  --color-paper: #f7f5f1;
+  --color-paper-alt: #eeece4;
 
-  --color-bg: #ffffff;
-  --color-bg-alt: #f8fafc;
-  --color-text: #1e293b;
-  --color-text-muted: #64748b;
-  --color-border: #e2e8f0;
+  --color-primary: #3f6b52;
+  --color-primary-hover: #2f5540;
+  --color-primary-light: #e3ebe5;
 
-  --color-success: #16a34a;
-  --color-danger: #dc2626;
-  --color-warning: #d97706;
+  --color-secondary: #c4642e;
+  --color-secondary-hover: #a8511f;
 
-  /* Typography */
+  --color-bg: var(--color-paper);
+  --color-bg-alt: var(--color-paper-alt);
+  --color-bg-inverse: var(--color-ink);
+
+  --color-text: #1c2620;
+  --color-text-muted: #5b6660;
+  --color-text-inverse: #f2f0ea;
+  --color-border: #dce3da;
+  --color-border-inverse: rgba(242, 240, 234, 0.16);
+
+  --color-success: #2f7d4f;
+  --color-danger: #b3432c;
+  --color-warning: #b8791f; */
+
+  /* ---------- Typography ---------- */
+  /* --font-family-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
   --font-family-base: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
 
-  --font-size-base: 16px;
+  --font-size-base: 17px;
   --font-size-sm: 0.875rem;
-  --font-size-lg: 1.125rem;
+  --font-size-lg: 1.15rem;
 
-  --font-size-h1: 2.5rem;
-  --font-size-h2: 2rem;
-  --font-size-h3: 1.5rem;
-  --font-size-h4: 1.25rem;
-  --font-size-h5: 1.1rem;
-  --font-size-h6: 1rem;
+  --font-size-h1: clamp(2.5rem, 5vw, 3.75rem);
+  --font-size-h2: clamp(1.9rem, 3.2vw, 2.5rem);
+  --font-size-h3: 1.4rem;
+  --font-size-h4: 1.2rem;
+  --font-size-h5: 1.05rem;
+  --font-size-h6: 0.95rem;
 
-  --line-height-base: 1.6;
-  --line-height-heading: 1.25;
+  --line-height-base: 1.65;
+  --line-height-heading: 1.15;
 
   --font-weight-normal: 400;
   --font-weight-medium: 500;
-  --font-weight-bold: 700;
+  --font-weight-bold: 700; */
 
-  /* Spacing scale */
-  --space-xs: 4px;
+  /* ---------- Spacing scale ---------- */
+  /* --space-xs: 4px;
   --space-sm: 8px;
   --space-md: 16px;
   --space-lg: 32px;
   --space-xl: 64px;
-  --space-2xl: 96px;
+  --space-2xl: 96px; */
 
-  /* Radius dan Shadow */
-  --radius-sm: 4px;
+  /* ---------- Radius & Shadow ---------- */
+  /* --radius-sm: 4px;
   --radius-base: 8px;
   --radius-lg: 16px;
   --radius-full: 9999px;
 
-  --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
-  --shadow-card-hover: 0 8px 20px rgba(0, 0, 0, 0.12);
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-card: 0 1px 2px rgba(20, 35, 28, 0.06);
+  --shadow-card-hover: 0 12px 24px rgba(20, 35, 28, 0.1);
+  --shadow-sm: 0 1px 3px rgba(20, 35, 28, 0.08); */
 
-  /* Layout */
-  --container-max-width: 1140px;
-  --container-padding: var(--space-md);
-  --grid-gap: var(--space-lg);
+  /* ---------- Layout ---------- */
+  /* --container-max-width: 1160px;
+  --container-padding: var(--space-lg);
+  --grid-gap: var(--space-lg); */
 
-  /* Transisi */
-  --transition-fast: 150ms ease;
-  --transition-base: 250ms ease;
-}
+  /* ---------- Transitions ---------- */
+  /* --transition-fast: 150ms ease;
+  --transition-base: 300ms cubic-bezier(0.22, 1, 0.36, 1);
+} */
