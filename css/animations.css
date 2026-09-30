@@ -1,25 +1,51 @@
+[data-animate] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 600ms ease-out, transform 600ms ease-out;
+  will-change: opacity, transform;
+}
 
-/* ==========================================================================
-   Animations (starter)
-   File milik Peran 4 (Interactive) — satu efek reveal saat scroll,
-   dipicu lewat atribut [data-animate] + class .is-visible dari JS
-   (contoh: IntersectionObserver di js/animations.js).
-   ========================================================================== */
+[data-animate="fade-in"] {
+  transform: none;
+}
 
-/* [data-animate] {
-  transform: translateY(16px);
-  transition: opacity 600ms ease, transform 600ms ease;
+[data-animate="slide-left"] {
+  transform: translateX(24px);
 }
 
 [data-animate].is-visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translate(0, 0);
+  will-change: auto;
+}
+
+[data-animate].is-visible:nth-child(2) {
+  transition-delay: 80ms;
+}
+
+[data-animate].is-visible:nth-child(3) {
+  transition-delay: 160ms;
+}
+
+.card,
+[data-js="team-list"]>* {
+  transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.card:hover,
+[data-js="team-list"]>*:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(20, 35, 28, 0.1);
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [data-animate] {
+
+  [data-animate],
+  [data-js="team-list"]>*,
+  .card {
     opacity: 1;
     transform: none;
     transition: none;
+    will-change: auto;
   }
-} */
+}

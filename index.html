@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,7 +9,16 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/sections.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
 
     <!-- Memanggil Tailwind CSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -62,23 +72,6 @@
         }
     </script>
 
-    <!-- Custom layer untuk animasi (FIXED) -->
-    <style type="text/tailwindcss">
-        @layer utilities {
-            [data-animate] {
-                /* Perbaikan: Menggunakan duration-[600ms] agar Tailwind tidak error */
-                @apply translate-y-4 transition-all duration-[600ms] ease-in-out;
-            }
-            [data-animate].is-visible {
-                @apply translate-y-0 opacity-100;
-            }
-            @media (prefers-reduced-motion: reduce) {
-                [data-animate] {
-                    @apply translate-y-0 opacity-100 transition-none;
-                }
-            }
-        }
-    </style>
 </head>
 
 <body class="bg-paper text-text font-sans text-[16px] sm:text-[17px] leading-[1.65]">
@@ -86,12 +79,19 @@
     <!-- HEADER -->
     <header class="sticky top-0 z-50 bg-paper/90 backdrop-blur-md border-b border-border">
         <div class="w-full max-w-[1160px] mx-auto px-lg py-md flex items-center justify-between">
-            <span class="font-display text-[1.3rem] font-bold text-text">Code 124 <span class="text-text-muted font-normal">/ Front End</span></span>
+            <span class="font-display text-[1.3rem] font-bold text-text">Code 124 <span
+                    class="text-text-muted font-normal">/ Front End</span></span>
             <nav>
                 <ul class="hidden md:flex gap-lg list-none">
-                    <li><a href="#visi-misi" class="text-text text-sm font-medium hover:text-primary transition-colors duration-150">Visi &amp; Misi</a></li>
-                    <li><a href="#tugas" class="text-text text-sm font-medium hover:text-primary transition-colors duration-150">Tugas Divisi</a></li>
-                    <li><a href="#tim" class="text-text text-sm font-medium hover:text-primary transition-colors duration-150">Tim</a></li>
+                    <li><a href="#visi-misi"
+                            class="text-text text-sm font-medium hover:text-primary transition-colors duration-150">Visi
+                            &amp; Misi</a></li>
+                    <li><a href="#tugas"
+                            class="text-text text-sm font-medium hover:text-primary transition-colors duration-150">Tugas
+                            Divisi</a></li>
+                    <li><a href="#tim"
+                            class="text-text text-sm font-medium hover:text-primary transition-colors duration-150">Tim</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -103,19 +103,29 @@
         <section id="hero" class="py-xl lg:py-2xl bg-paper">
             <div class="w-full max-w-[1160px] mx-auto px-lg">
                 <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-md lg:gap-xl items-end">
-                    
+
                     <div>
-                        <span class="block text-primary font-medium text-sm mb-sm">Divisi Front End — Komunitas Code 124</span>
-                        <h1 class="font-display font-bold text-[clamp(2.5rem,5vw,3.75rem)] leading-[1.15] text-text mb-lg tracking-[-0.01em]">Welcome To Our Division.</h1>
-                        <p class="text-[1.15rem] text-text-muted max-w-[46ch] mb-lg">Code 124 adalah komunitas belajar dan berkarya di bidang teknologi. Divisi Front End bertanggung jawab membangun tampilan, interaksi, dan pengalaman pengguna dari setiap produk yang kami buat bersama.</p>
-                        
+                        <span class="block text-primary font-medium text-sm mb-sm">Divisi Front End — Komunitas Code
+                            124</span>
+                        <h1
+                            class="font-display font-bold text-[clamp(2.5rem,5vw,3.75rem)] leading-[1.15] text-text mb-lg tracking-[-0.01em]">
+                            Welcome To Our Division.</h1>
+                        <p class="text-[1.15rem] text-text-muted max-w-[46ch] mb-lg">Code 124 adalah komunitas belajar
+                            dan berkarya di bidang teknologi. Divisi Front End bertanggung jawab membangun tampilan,
+                            interaksi, dan pengalaman pengguna dari setiap produk yang kami buat bersama.</p>
+
                         <div class="flex flex-col sm:flex-row gap-md mt-lg">
-                            <a href="#tim" class="inline-flex items-center justify-center gap-sm px-lg py-sm font-sans text-[17px] font-medium rounded-sm border-[1.5px] border-primary bg-primary text-white hover:bg-primary-hover hover:border-primary-hover hover:no-underline transition-colors w-full sm:w-auto">Kenalan dengan tim kami</a>
-                            <a href="#tugas" class="inline-flex items-center justify-center gap-sm px-lg py-sm font-sans text-[17px] font-medium rounded-sm border-[1.5px] border-primary bg-transparent text-primary hover:bg-primary-light hover:text-primary-hover hover:no-underline transition-colors w-full sm:w-auto">Lihat tugas divisi</a>
+                            <a href="#tim"
+                                class="inline-flex items-center justify-center gap-sm px-lg py-sm font-sans text-[17px] font-medium rounded-sm border-[1.5px] border-primary bg-primary text-white hover:bg-primary-hover hover:border-primary-hover hover:no-underline transition-colors w-full sm:w-auto">Kenalan
+                                dengan tim kami</a>
+                            <a href="#tugas"
+                                class="inline-flex items-center justify-center gap-sm px-lg py-sm font-sans text-[17px] font-medium rounded-sm border-[1.5px] border-primary bg-transparent text-primary hover:bg-primary-light hover:text-primary-hover hover:no-underline transition-colors w-full sm:w-auto">Lihat
+                                tugas divisi</a>
                         </div>
                     </div>
-                    
-                    <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-md lg:gap-lg lg:border-l lg:border-t-0 sm:border-t border-border lg:pl-lg sm:pt-lg lg:pt-0 mt-xl lg:mt-0">
+
+                    <div
+                        class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-1 gap-md lg:gap-lg lg:border-l lg:border-t-0 sm:border-t border-border lg:pl-lg sm:pt-lg lg:pt-0 mt-xl lg:mt-0">
                         <div>
                             <div class="font-display text-[2.25rem] text-primary leading-none mb-xs">2025</div>
                             <div class="text-text-muted text-sm">Angkatan aktif divisi</div>
@@ -137,22 +147,30 @@
         <!-- VISI MISI -->
         <section id="visi-misi" class="py-2xl border-t border-border" data-animate="fade-up">
             <div class="w-full max-w-[1160px] mx-auto px-lg">
-                
+
                 <div class="max-w-[56ch] mb-xl">
-                    <h2 class="font-display font-bold text-[clamp(1.9rem,3.2vw,2.5rem)] leading-[1.15] text-text tracking-[-0.01em]">Visi &amp; misi</h2>
+                    <h2
+                        class="font-display font-bold text-[clamp(1.9rem,3.2vw,2.5rem)] leading-[1.15] text-text tracking-[-0.01em]">
+                        Visi &amp; misi</h2>
                 </div>
-                
+
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-lg">
-                    <div class="bg-paper border border-border border-t-[3px] border-t-primary rounded-b-sm overflow-hidden h-full">
+                    <div
+                        class="bg-paper border border-border border-t-[3px] border-t-primary rounded-b-sm overflow-hidden h-full">
                         <div class="p-lg">
                             <h3 class="font-sans font-bold text-[1.4rem] text-text mb-sm tracking-[-0.01em]">Visi</h3>
-                            <p class="text-text-muted max-w-[62ch] mb-0">Menjadi divisi Front End yang menghasilkan antarmuka rapi, konsisten, dan mudah digunakan untuk seluruh produk komunitas Code 124.</p>
+                            <p class="text-text-muted max-w-[62ch] mb-0">Menjadi divisi Front End yang menghasilkan
+                                antarmuka rapi, konsisten, dan mudah digunakan untuk seluruh produk komunitas Code 124.
+                            </p>
                         </div>
                     </div>
-                    <div class="bg-paper border border-border border-t-[3px] border-t-primary rounded-b-sm overflow-hidden h-full">
+                    <div
+                        class="bg-paper border border-border border-t-[3px] border-t-primary rounded-b-sm overflow-hidden h-full">
                         <div class="p-lg">
                             <h3 class="font-sans font-bold text-[1.4rem] text-text mb-sm tracking-[-0.01em]">Misi</h3>
-                            <p class="text-text-muted max-w-[62ch] mb-0">Membangun komponen yang bisa dipakai ulang, berbagi ilmu antar anggota, dan terus belajar praktik terbaik pengembangan antarmuka web.</p>
+                            <p class="text-text-muted max-w-[62ch] mb-0">Membangun komponen yang bisa dipakai ulang,
+                                berbagi ilmu antar anggota, dan terus belajar praktik terbaik pengembangan antarmuka
+                                web.</p>
                         </div>
                     </div>
                 </div>
@@ -161,41 +179,53 @@
         </section>
 
         <!-- TUGAS DIVISI -->
-        <section id="tugas" class="py-2xl border-t border-border-inverse bg-ink text-text-inverse" data-animate="fade-up">
+        <section id="tugas" class="py-2xl border-t border-border-inverse bg-ink text-text-inverse"
+            data-animate="fade-up">
             <div class="w-full max-w-[1160px] mx-auto px-lg">
-                
+
                 <div class="max-w-[56ch] mb-xl">
-                    <h2 class="font-display font-bold text-[clamp(1.9rem,3.2vw,2.5rem)] leading-[1.15] text-text-inverse mb-md tracking-[-0.01em]">Tugas divisi Front End</h2>
-                    <p class="text-[#f2f0ea]/75 max-w-[62ch]">Hal-hal yang jadi tanggung jawab kami di setiap proyek Code 124.</p>
+                    <h2
+                        class="font-display font-bold text-[clamp(1.9rem,3.2vw,2.5rem)] leading-[1.15] text-text-inverse mb-md tracking-[-0.01em]">
+                        Tugas divisi Front End</h2>
+                    <p class="text-[#f2f0ea]/75 max-w-[62ch]">Hal-hal yang jadi tanggung jawab kami di setiap proyek
+                        Code 124.</p>
                 </div>
-                
+
                 <ul class="list-none grid gap-md">
                     <li class="flex gap-md py-md border-b border-border-inverse">
                         <span class="font-display text-primary text-[1.1rem] shrink-0 w-[2ch]">01</span>
                         <div>
-                            <h4 class="font-sans font-bold text-[1.2rem] text-text-inverse mb-xs tracking-[-0.01em]">Membangun struktur & tampilan halaman</h4>
-                            <p class="text-[#f2f0ea]/75 mb-0 max-w-[62ch]">Menerjemahkan desain menjadi HTML dan CSS yang rapi, konsisten, dan mudah dipelihara.</p>
+                            <h4 class="font-sans font-bold text-[1.2rem] text-text-inverse mb-xs tracking-[-0.01em]">
+                                Membangun struktur & tampilan halaman</h4>
+                            <p class="text-[#f2f0ea]/75 mb-0 max-w-[62ch]">Menerjemahkan desain menjadi HTML dan CSS
+                                yang rapi, konsisten, dan mudah dipelihara.</p>
                         </div>
                     </li>
                     <li class="flex gap-md py-md border-b border-border-inverse">
                         <span class="font-display text-primary text-[1.1rem] shrink-0 w-[2ch]">02</span>
                         <div>
-                            <h4 class="font-sans font-bold text-[1.2rem] text-text-inverse mb-xs tracking-[-0.01em]">Menjaga design system</h4>
-                            <p class="text-[#f2f0ea]/75 mb-0 max-w-[62ch]">Mengelola token warna, tipografi, dan komponen dasar supaya seluruh halaman punya tampilan yang seragam.</p>
+                            <h4 class="font-sans font-bold text-[1.2rem] text-text-inverse mb-xs tracking-[-0.01em]">
+                                Menjaga design system</h4>
+                            <p class="text-[#f2f0ea]/75 mb-0 max-w-[62ch]">Mengelola token warna, tipografi, dan
+                                komponen dasar supaya seluruh halaman punya tampilan yang seragam.</p>
                         </div>
                     </li>
                     <li class="flex gap-md py-md border-b border-border-inverse">
                         <span class="font-display text-primary text-[1.1rem] shrink-0 w-[2ch]">03</span>
                         <div>
-                            <h4 class="font-sans font-bold text-[1.2rem] text-text-inverse mb-xs tracking-[-0.01em]">Menghubungkan data dari API</h4>
-                            <p class="text-[#f2f0ea]/75 mb-0 max-w-[62ch]">Mengambil data seperti daftar anggota dari endpoint PHP/JSON dan menampilkannya secara dinamis di halaman.</p>
+                            <h4 class="font-sans font-bold text-[1.2rem] text-text-inverse mb-xs tracking-[-0.01em]">
+                                Menghubungkan data dari API</h4>
+                            <p class="text-[#f2f0ea]/75 mb-0 max-w-[62ch]">Mengambil data seperti daftar anggota dari
+                                endpoint PHP/JSON dan menampilkannya secara dinamis di halaman.</p>
                         </div>
                     </li>
                     <li class="flex gap-md py-md border-b border-border-inverse">
                         <span class="font-display text-primary text-[1.1rem] shrink-0 w-[2ch]">04</span>
                         <div>
-                            <h4 class="font-sans font-bold text-[1.2rem] text-text-inverse mb-xs tracking-[-0.01em]">Memastikan tampilan responsif</h4>
-                            <p class="text-[#f2f0ea]/75 mb-0 max-w-[62ch]">Menguji dan menyesuaikan halaman agar tetap nyaman digunakan di desktop, tablet, maupun ponsel.</p>
+                            <h4 class="font-sans font-bold text-[1.2rem] text-text-inverse mb-xs tracking-[-0.01em]">
+                                Memastikan tampilan responsif</h4>
+                            <p class="text-[#f2f0ea]/75 mb-0 max-w-[62ch]">Menguji dan menyesuaikan halaman agar tetap
+                                nyaman digunakan di desktop, tablet, maupun ponsel.</p>
                         </div>
                     </li>
                 </ul>
@@ -206,12 +236,15 @@
         <!-- TIM -->
         <section id="tim" class="py-2xl border-t border-border" data-animate="fade-up">
             <div class="w-full max-w-[1160px] mx-auto px-lg">
-                
+
                 <div class="max-w-[56ch] mb-xl">
-                    <h2 class="font-display font-bold text-[clamp(1.9rem,3.2vw,2.5rem)] leading-[1.15] text-text mb-md tracking-[-0.01em]">Tim Front End</h2>
-                    <p class="text-text-muted max-w-[62ch]">Anggota divisi Front End Code 124, diambil otomatis dari data anggota.</p>
+                    <h2
+                        class="font-display font-bold text-[clamp(1.9rem,3.2vw,2.5rem)] leading-[1.15] text-text mb-md tracking-[-0.01em]">
+                        Tim Front End</h2>
+                    <p class="text-text-muted max-w-[62ch]">Anggota divisi Front End Code 124, diambil otomatis dari
+                        data anggota.</p>
                 </div>
-                
+
                 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-lg" data-js="team-list">
                     <!-- Template Card untuk file js/main.js : 
 
@@ -236,16 +269,18 @@
 
     <!-- FOOTER -->
     <footer class="py-xl bg-ink text-[#f2f0ea]/70">
-        <div class="w-full max-w-[1160px] mx-auto px-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-md text-left">
+        <div
+            class="w-full max-w-[1160px] mx-auto px-lg flex flex-col sm:flex-row items-start sm:items-center justify-between gap-md text-left">
             <span>&copy; 2026 Code 124 — Divisi Front End.</span>
-            <a href="mailto:frontend@code124.id" class="text-[#f2f0ea]/85 hover:text-primary transition-colors duration-150">frontend@code124.id</a>
+            <a href="mailto:frontend@code124.id"
+                class="text-[#f2f0ea]/85 hover:text-primary transition-colors duration-150">frontend@code124.id</a>
         </div>
     </footer>
 
     <script src="js/utils.js"></script>
     <script src="js/state.js"></script>
-    <script src="js/api.js"></script>
-    <script src="js/animations.js"></script>
-    <script src="js/main.js"></script>
+    <script type="module" src="js/animations.js"></script>
+    <script type="module" src="js/main.js"></script>
 </body>
+
 </html>
