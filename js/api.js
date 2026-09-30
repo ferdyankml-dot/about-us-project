@@ -1,4 +1,4 @@
-const CACHE_KEY = 'team-data-cache';
+const CACHE_KEY = 'team-data-cache-v2';
 const CACHE_TTL_MS = 5 * 60 * 1000; // 5 menit
 
 async function fetchTeamData() {
@@ -21,6 +21,10 @@ function getFromCache() {
   const raw = localStorage.getItem(CACHE_KEY);
   if (!raw) return null;
   const { data, timestamp } = JSON.parse(raw);
+  if (!data || !Array.isArray(data.anggota)) {
+    localStorage.removeItem(CACHE_KEY);
+    return null;
+  }
   if (Date.now() - timestamp > CACHE_TTL_MS) {
     localStorage.removeItem(CACHE_KEY);
     return null;

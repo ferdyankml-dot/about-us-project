@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation Test</title>
+    <link rel="stylesheet" href="../css/animations.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 48px;
+            font-family: sans-serif;
+            background: #f7f5f1;
+        }
+
+        .demo {
+            min-height: 120vh;
+            display: grid;
+            align-content: start;
+            gap: 24px;
+        }
+
+        .card {
+            padding: 32px;
+            background: white;
+            border: 1px solid #dce3da;
+            border-top: 3px solid #3f6b52;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="demo">
+        <h1 data-animate="fade-in">Animation sandbox</h1>
+        <div class="card" data-animate="fade-up">Dummy Card 1</div>
+        <div class="card" data-animate="fade-up">Dummy Card 2</div>
+        <div class="card" data-animate="slide-left">Dummy Card 3</div>
+    </main>
+    <script type="module" src="../js/animations.js"></script>
+</body>
+
+</html>
